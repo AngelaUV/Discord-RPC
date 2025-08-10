@@ -30,7 +30,7 @@ namespace Discord {
 
     void Initialize() {
         DiscordEventHandlers handlers;
-        Discord_Initialize("APPLICATION ID", &handlers, 1, nullptr);
+        Discord_Initialize("1404101610052915210", &handlers, 1, nullptr);
     }
 
     void User() {
@@ -66,10 +66,10 @@ namespace Discord {
         discordPresence.smallImageKey = util::string_to_utf8(smallImageKey);
         discordPresence.smallImageText = util::string_to_utf8(smallImageText);
 
-        DiscordRichPresenceButton websiteButton = { .label = u8"Visit Website", .url = u8"https://your-website.com/" };
-        DiscordRichPresenceButton discordButton = { .label = u8"Join Discord", .url = u8"https://discord.com/invite/" };
+        // websiteButton = { .label = u8"Visit Website", .url = u8"https://your-website.com/" };
+        DiscordRichPresenceButton discordButton = { .label = u8"Join Discord", .url = u8"https://discord.gg/MYxTSNanqY" };
 
-        discordPresence.buttons[0] = &websiteButton;
+        // discordPresence.buttons[0] = &websiteButton;
         discordPresence.buttons[1] = &discordButton;
         Discord_UpdatePresence(&discordPresence);
     }
